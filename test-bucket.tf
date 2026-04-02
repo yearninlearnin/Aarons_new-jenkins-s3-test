@@ -7,15 +7,15 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "terraform-state-aaronmcd"                 # Name of the S3 bucket
-    key     = "jenkins-test-031726.tfstate"        # The name of the state file in the bucket
-    region  = "us-east-2"                          # Use a variable for the region
+    bucket  = "we-webhookin-foolz"                      # Name of the S3 bucket
+    key     = "jenkins-test-0402-26bruh.tfstate"        # The name of the state file in the bucket
+    region  = "us-west-1"                          # Use a variable for the region
     encrypt = true                                 # Enable server-side encryption (optional but recommended)
   } 
 }
 
 provider "aws" {
-  region  = "us-east-1"
+  region  = "us-west-1"
 }
 
 resource "aws_s3_bucket" "frontend" {
